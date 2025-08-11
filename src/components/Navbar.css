@@ -1,0 +1,75 @@
+.navbar {
+    width: 1275px;
+    height: 85px;
+    margin-top: 25px;
+    background-color: rgba(45, 47, 57, 0.60);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-color 1.5s ease-in-out;
+}
+
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transform: translateY(-93px);
+    transition: transform 0.2s ease-in-out;
+    transition: background-color 1.5s ease-in-out;    
+    background-color: rgba(45, 47, 57, 0.85);
+}
+
+.navbar-fixed:hover {
+    transform: translateY(-25px);
+    transition: transform 0.2s ease-in-out;
+    transition-delay: 0.05s;
+}
+
+.jumplinks {
+    height: 85px;
+    width: 890px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-text {
+    text-align: center;
+    color: rgba(56, 216, 126, 0.65);
+    font-size: 28px;
+    font-family: "Consolas", monospace;
+    font-weight: 700;
+    cursor: pointer; 
+    text-decoration: none; 
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-text:hover {
+    color: rgba(56, 216, 126, 1);
+}
+
+.contact-icons {
+    display: flex;
+    height: 85px;
+    width: 385px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    fill: rgba(56, 216, 126, 1);
+}

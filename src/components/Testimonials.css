@@ -1,0 +1,14 @@
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+   /* border: 2px dashed black;*/
+}
+
+.testimonials-frame{
+    display: flex;
+    justify-content: space-between;
+    width: 1275px;
+    /*border: 2px dashed red;*/
+}

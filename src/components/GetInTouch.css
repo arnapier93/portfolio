@@ -1,0 +1,70 @@
+.get-in-touch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px 100px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px dashed red;
+}
+
+.contact-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  min-width: 650px;
+  height: 510px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin: 25px;
+}
+
+.email-field{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.email-input{
+  background-color: #DEDEDE;
+  font-family: Consolas, monospace;
+  color: #595C69;
+  font-size: 28px;
+  margin-left: 3%;
+  flex-grow: 1;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+  
+.email-input::placeholder {
+  color: #A0A2BD; 
+  opacity: 1;
+}
+
+.message-input{
+  background-color: #DEDEDE;
+  font-family: Consolas, monospace;
+  color: #595C69;
+  font-size: 28px;
+  margin: 0% 3% 3% 3%;
+  width: 90%;
+  flex-grow: 1;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.message-input::placeholder {
+  color: #A0A2BD; 
+  opacity: 1;
+}

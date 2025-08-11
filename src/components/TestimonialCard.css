@@ -1,0 +1,42 @@
+.testimonial-card{
+  display: flex;
+  width: 30%;
+  box-sizing: border-box;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 45px;
+  padding: 25px;
+  /*border: 2px dashed blue;*/
+}
+
+.testimonial-card .photo{
+  height: 85px;
+  width: 85px;
+  margin: 5px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.blurb{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.name-and-details{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  align-self: flex-end;
+}
+
+.name-and-details .title{
+  font-size: 24px;
+  color: #000000;
+}
+
+.name-and-details .text{
+  font-size: 11px;
+  line-height: 1.1;
+  margin: 0px;
+}
