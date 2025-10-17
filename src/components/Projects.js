@@ -1,40 +1,57 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Projects.css"
-import Project1 from "./Project1"
-import SliderPuzzleModal from "./SliderPuzzleModal";
+import ProjectCard from "./ProjectCard.js"
 
-const projectText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+import tileGameScreenshot from "../assets/tile-game-screenshot.png";
+import toastTesterScreenshot from "../assets/toast-tester-screenshot.png"
+
+const projectList = [
+  {
+    title: "N-Puzzle",
+    description: `The N-Puzzle is a fun take on an old classic, the 8-puzzle.
+      You can choose your board size anywhere from a 3-puzzle to a 99-puzzle! 
+      You can undo, restart, or shuffle for a new board. All boards are 
+      guaranteed solvable.`,
+    tags: ["JavaScript REACT", "HTML", "CSS"],
+    screenshot: tileGameScreenshot,
+    type: "iframe",
+    src: process.env.PUBLIC_URL +  "/projects/tile-game/index.html",
+  },
+  { 
+    title: "Toast Tester", 
+    description: `Taste the toast! A toast simulator that is almost as 
+      exciting as making real toast! Realistic gradient toasting, functional
+      smoke alarm, and relaxing background music are just SOME of the features 
+      you can expect. Toast so good you can almost taste it, Toast Tester! (TM) --
+      This was a group project for a Computer Graphics class I took at UMass 
+      Dartmouth, despite it's tongue-in-cheek style it earned a perfect score 
+      and high reviews from the Professor who had us present the project to a 
+      touring group of local high schoolers`,
+    tags: ["JavaScript", "Three.js"],
+    screenshot: toastTesterScreenshot, 
+    type: "iframe", 
+    src: "/projects/Toast-Tester/index.html" 
+  
+  }
+
+];
 
 const Projects = () => {
+  
   return (
     <div className="projects">
         <div className="title-box">
             <h1 className="title">Projects</h1>
             <p className="text">Games, apps and more</p>
         </div>
-        <Project1/>
-        <div className="project-card">
-            <div className="screenshots">{}</div>
-            <div style={{display: "flex", flexDirection: "column", height: "425px", justifyContent: "space-between"}}>
-                <div style= {{ display: "flex", justifyContent: "space-between", width: "800px"}}>
-                    <h1 className="title" style={{color: "#000000"}}>Project</h1>
-                    <div style={{display: "flex", flexDirection: "column"}}>
-                        <p className="text" style={{margin: "0px"}}>Made with:</p>
-                        <div className="tags-box">
-                            <div className="tag">Python</div>
-                            <div className="tag">JavaScript</div>
-                        </div>
-                    </div>
-                </div>
-                <p className="text" style={{ width: "800px", height: "225px"}}>{projectText}</p>
-                <div className="buttons-box">
-                    <SliderPuzzleModal/>
-                    <button>PROVIDE FEEDBACK {'>'}</button>
-                </div>
-            </div>
+        <div className="project-list">
+          {projectList.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+            />
+          ))}
         </div>
-
-
     </div>
   );
 }

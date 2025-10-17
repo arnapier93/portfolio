@@ -7,65 +7,6 @@
     gap: 50px;
 }
 
-.project-card{
-    display: flex;
-    width: 1175px;
-    justify-content: space-between;
-    padding: 50px;
-    align-items: center;
-    border-radius: 15px;
-    background: #FFFFFF;
-    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-}
-
-.tags-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 2px;
-}
-
-.tag{
-    border-radius: 15px;
-    background: #A0A2BD;
-    display: inline-flex;
-    padding: 2px 25px;
-    justify-content: center;
-    align-items: center;    
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
-    font-family: Consolas, monospace;
-    font-weight: 400;
-    line-height: 34px;
-    margin: 2px;
-}
-
-.project-card .text{
-    font-size: 18px;
-}
-
-.buttons-box{
-    display: flex;
-    padding: 2px;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.buttons-box button{
-    width: 240px;
-    height: 60px;
-    font-size: 18px;
-}
-
-.screenshots{
-    width: 425px;
-    height: 425px;
-    background: #000000;
-}
 
 
 
