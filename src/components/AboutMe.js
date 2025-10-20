@@ -96,7 +96,7 @@ const AboutMe = () => {
   return (
     <div className="about-me">
       <div style={{ display: "flex" }}>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", border: "2px dashed orange"}}> 
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}> 
           <div className="content">
             <h1 className="title">Hi! I'm Andrew Napier</h1>
             <p className="text">{text}</p>

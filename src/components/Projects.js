@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard.js"
 
 import tileGameScreenshot from "../assets/tile-game-screenshot.png";
 import toastTesterScreenshot from "../assets/toast-tester-screenshot.png"
+import theLongestBoxScreenshot from "../assets/the-longest-box-screenshot.png"
 
 const projectList = [
   {
@@ -31,8 +32,20 @@ const projectList = [
     screenshot: toastTesterScreenshot, 
     type: "iframe", 
     src: "/projects/Toast-Tester/index.html" 
-  
+  },
+  {
+    title: "The Longest Box",
+    description: `The Longest Box is a comic book cataloging app that allows you 
+    to scan in images of your comics and store all the info about all your comics 
+    in one place, and when you want to go out and buy some more comics you can hit 
+    the pin in the toolbar and find local comic book stores in your area.`,
+    tags: ["Java", "Android Studio", "XML", "SQLite"],
+    screenshot: theLongestBoxScreenshot,
+    type: "video",
+    src: "/projects/the-longest-box/demo.mp4"
   }
+
+
 
 ];
 
@@ -49,6 +62,7 @@ const Projects = () => {
             <ProjectCard
               key={index}
               project={project}
+              index={index}
             />
           ))}
         </div>

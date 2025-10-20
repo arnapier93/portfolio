@@ -1,73 +1,122 @@
-.project-card{
+.project-card {
     display: flex;
-    width: 78vw;
-    height: 455px;
+    flex-direction: row; /* default layout */
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    padding: 50px;
-    border-radius: 15px;
-    background: #FFFFFF;
-    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-    margin: 25px;
-}
-
-.project-content{
+    gap: 3vw; /* scales gap with screen width */
+    width: 78vw;
+    aspect-ratio: 3 / 1; /* 🔥 maintains consistent shape like a video frame */
+    padding: 3vw; /* use vw instead of px for responsive padding */
+    border-radius: 1vw; /* scales smoothly with width */
+    background: #ffffff;
+    box-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+    margin: 3vh 0;
+    overflow: hidden; /* ensures no overflow when scaling */
+  }
+  
+  .project-card.flipped {
+    flex-direction: row-reverse; /* flips every other card */
+  }
+  
+  .project-content {
     display: flex;
     flex-direction: column;
-    height: 425px;
     justify-content: space-between;
-}
-
-.project-title-and-tags{
-    border: 2px dashed red;
+    height: 100%; /* now it fills the card’s aspect-based height */
+  }
+  
+  .project-title-and-tags {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: max-content;
     width: 52vw;
-}
-
-.tags-box{
-    border: 2px solid blue;
+  }
+  
+  .project-title-and-tags .title {
+    color: black;
+    font-size: clamp(1.2rem, 1vw + 0.8rem, 2rem); /* responsive title */
+    font-weight: 600;
+  }
+  
+  .tags-box {
     display: flex;
-    align-items: center;
-}
-
-.tag{
-    border-radius: 15px;
-    background: #A0A2BD;
-    display: inline-flex;
-    padding: 2px 25px;
-    justify-content: center;
-    align-items: center;    
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
+    gap: 0.6vw;
+  }
+  
+  .tag {
+    padding: 0.2em 1em;
+    background: #a0a2bd;
+    color: #fff;
+    font-weight: 500;
     font-family: Consolas, monospace;
-    font-weight: 400;
-    line-height: 34px;
-    margin: 2px;
-}
-
-.buttons-box{
-    border: 2px solid green;
+    border-radius: 15px;
+    font-size: clamp(0.8rem, 0.7vw + 0.4rem, 1.1rem); /* responsive tags */
+  }
+  
+  .buttons-box {
     display: flex;
-    padding: 2px;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.buttons-box button{
-    width: 240px;
-    height: 60px;
-    font-size: 18px;
-}
-
-.screenshots{
-    width: 425px;
-    height: 425px;
+    gap: 2vw;
+  }
+  
+  .buttons-box button {
+    width: clamp(160px, 15vw, 240px); /* min 160px, max 240px */
+    height: clamp(40px, 5vh, 60px); /* scales vertically with viewport */
+    font-size: clamp(0.9rem, 0.8vw + 0.5rem, 1.2rem);
+  }
+  
+  .screenshots {
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* keep screenshots square */
     object-fit: cover;
-}
+    border-radius: 2%;
+  }
+  
+  @media (orientation: portrait) {
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      aspect-ratio: 5 / 7;
+      width: 90vw;
+      height: auto; /* let content define height */
+    }
+  
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+  
+    .project-info .title {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+    }
+  
+    .text {
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      margin: 10px 0;
+    }
+  
+ 
+    .buttons-box {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .buttons-box button {
+      width: 40vw;
+      max-width: 240px;
+      height: 50px;
+    }
+  }
+  
