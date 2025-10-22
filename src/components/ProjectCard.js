@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./ProjectCard.css";
 import Modal from "./Modal";
+import FeedbackToast from "./FeedbackToast";
+import FeedbackToast from "./FeedbackToast";
 
 function ProjectCard({ project, index }) {
   const { title, description, tags, screenshot, type, src } = project;
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showFeedback, setShowFeedback] = useState(false);
 
-  const handleOpen = () => setSelectedProject(project);
-  const handleClose = () => setSelectedProject(null);
+  const handleOpenProject = () => setSelectedProject(project);
+  const handleCloseProject = () => setSelectedProject(null);
+ 
+  const handleOpenFeedback = () => setShowFeedback(true)
+  const handleCloseFeedback = () => setShowFeedback(false)
+
 
   const isFlipped = index % 2 === 1; // flip every other card
 
@@ -27,8 +34,10 @@ function ProjectCard({ project, index }) {
           <p className="text">{description}</p>
 
           <div className="buttons-box">
-            <button onClick={handleOpen}>LAUNCH DEMO {'>'}</button>
-            <button>PROVIDE FEEDBACK {'>'}</button>
+            <button onClick={handleOpenProject}>LAUNCH DEMO {'>'}</button>
+            <button onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}</button>
+            <button onClick={handleOpenProject}>LAUNCH DEMO {'>'}</button>
+            <button onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}</button>
           </div>
         </div>
 
@@ -36,7 +45,8 @@ function ProjectCard({ project, index }) {
       </div>
 
       {selectedProject && (
-        <Modal onClose={handleClose}>
+        <Modal onClose={handleCloseProject}>
+        <Modal onClose={handleCloseProject}>
           {type === "iframe" && (
             <iframe src={src} title={title} style={{ width: "100%", height: "100%", border: "none" }} />
           )}
@@ -52,6 +62,8 @@ function ProjectCard({ project, index }) {
           )}
         </Modal>
       )}
+      {showFeedback && <FeedbackToast onClose={handleCloseFeedback} />}
+      {showFeedback && <FeedbackToast onClose={handleCloseFeedback} />}
     </>
   );
 }
