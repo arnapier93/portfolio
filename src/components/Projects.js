@@ -5,6 +5,9 @@ import ProjectCard from "./ProjectCard.js"
 import tileGameScreenshot from "../assets/tile-game-screenshot.png";
 import toastTesterScreenshot from "../assets/toast-tester-screenshot.png"
 import theLongestBoxScreenshot from "../assets/the-longest-box-screenshot.png"
+import dowdSolarPumpScreenshot from "../assets/DSP_Logo.png"
+//import thePirateGameScreenshot from "../assets/the-pirate-game-screenshot.png"
+
 
 const projectList = [
   {
@@ -31,7 +34,7 @@ const projectList = [
     tags: ["JavaScript", "Three.js"],
     screenshot: toastTesterScreenshot, 
     type: "iframe", 
-    src: "/projects/Toast-Tester/index.html" 
+    src: process.env.PUBLIC_URL + "/projects/Toast-Tester/index.html" 
   },
   {
     title: "The Longest Box",
@@ -43,10 +46,31 @@ const projectList = [
     screenshot: theLongestBoxScreenshot,
     type: "video",
     src: "/projects/the-longest-box/demo.mp4"
+  },
+  {
+    title: "Dowd Solar Pump",
+    description: `The DSP was an interdisciplinary senior design project, at UMass Dartmouth. 
+      In total our members covered 4 disciplines:Electrical, Mechanical and Computer Engineering 
+      as well as Computer Science. I led the App Team and communicated with the Engineering Team
+      and customer to deliver a fully functioning iOS app capable of global communication with the 
+      IoT style pump which is able to set schedules and provide diagnostics and event tracking.`,
+    tags: ["Swift", "XCode", "Postman", "AWS"],
+    screenshot: dowdSolarPumpScreenshot,
+    //type: "video",
+    //src: "/src/needed"
+  },
+  {
+    title: "The Pirate Game: A Working Title",
+    description: `Sail the seven seas and avast yee jibber jabber! Experience the fun
+      of this 2.5D pirate game. Retro visuals and procedurally generated environments.
+      Sail the endless oceans in a simulated 3D top-down view engaging in battles with
+      other ships. Then seamlessly switch into side scrolling smash and grabs, boarding
+      the boat and taking the spoils of war. Enjoy matey!`,
+    tags: ["Unity", "C#"],
+    //screenshot: thePirateGameScreenshot,
+    type: "iframe",
+    src: process.env.PUBLIC_URL + "/projects/the-pirate-game/index.html" 
   }
-
-
-
 ];
 
 const Projects = () => {

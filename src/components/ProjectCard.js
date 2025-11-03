@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ProjectCard.css";
 import Modal from "./Modal";
 import FeedbackToast from "./FeedbackToast";
-import FeedbackToast from "./FeedbackToast";
 
 function ProjectCard({ project, index }) {
   const { title, description, tags, screenshot, type, src } = project;
@@ -36,8 +35,6 @@ function ProjectCard({ project, index }) {
           <div className="buttons-box">
             <button onClick={handleOpenProject}>LAUNCH DEMO {'>'}</button>
             <button onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}</button>
-            <button onClick={handleOpenProject}>LAUNCH DEMO {'>'}</button>
-            <button onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}</button>
           </div>
         </div>
 
@@ -45,7 +42,6 @@ function ProjectCard({ project, index }) {
       </div>
 
       {selectedProject && (
-        <Modal onClose={handleCloseProject}>
         <Modal onClose={handleCloseProject}>
           {type === "iframe" && (
             <iframe src={src} title={title} style={{ width: "100%", height: "100%", border: "none" }} />
@@ -62,7 +58,6 @@ function ProjectCard({ project, index }) {
           )}
         </Modal>
       )}
-      {showFeedback && <FeedbackToast onClose={handleCloseFeedback} />}
       {showFeedback && <FeedbackToast onClose={handleCloseFeedback} />}
     </>
   );

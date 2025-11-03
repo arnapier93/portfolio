@@ -1,27 +1,47 @@
 import React from "react";
 import "./TestimonialCard.css";
-import photo from "../assets/claymation_me.png";
+
+import firasHeadshot from "../assets/firas_khatib.webp";
+import addyHeadshot from "../assets/addy.webp"
+import codeWizLogo from "../assets/code-wiz-logo.png"
+
+const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+  Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, 
+  sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
 const TestimonialCard = ({ index }) => {
 
   const contents = [
     {
-      blurb: "Master Bruce puts the st in juice... JUSTICE",
-      name: "Alfred Pennyworth",
-      details: ["Wayne Manor", "Joke Department", "Head Writer"],
-      photo: photo
+      blurb: `I was lucky enough to have Andrew in 3 of my classes last year. He wrote a 
+      thoroughly researched term paper on Targeted Advertising & Digital Marketing for my
+      Social and Ethical Aspects of Computing course and created a very original Unity game
+      for my Computer Game Design course. Our year-long capstone senior design course is
+      where I really got to see Andrew flourish though, as every other team had 3-4 students
+      in the class to work on their project. Andrew tackled his capstone project on his own,
+      with only a couple graduate students collaborating with him outside of class. In my
+      course, however, Andrew was the only one producing all the required documentation for
+      the client and he thrived with this individual responsibility. I wish I had more
+      dedicated students like him!`,
+      name: "Firas Khatib, PhD",
+      details: ["Associate Professor", "Department of Computer and Information Science", "University of Massachustts Dartmouth"],
+      photo: firasHeadshot
     },
     {
-      blurb: "Batman is my inspiration, he's why I do what I do",
-      name: "Barbara Gordon",
-      details: ["Gotham City Police", "Detectives Unit", "Detective"],
-      photo: photo
+      blurb: `I had the pleasure to work with Andrew on the Dowd Solar Pump Project. He managed the team with good 
+        communication and kept everyone on track. He was always respectful and helpful when working between the 
+        engineering team and with the customer. When issues did come up Andrew stayed calm and focued on finding a 
+        solution for the team. I would be glad to collaborate with him again.`,
+      name: "Aditya Sahu",
+      details: ["Software Development Engineer", "Amazon Web Services"],
+      photo: addyHeadshot
     },
     {
-      blurb: "What does Batman do when the bat signal goes up and he's like... on the toilet or something?",
-      name: "Rob Schrab",
-      details: ["Starburns Industries", "Cool Guy Department", "Cool Guy"],
-      photo: photo
+      blurb: loremIpsum,
+      name: "Serena ",
+      details: ["Center Director", "CodeWiz"],
+      photo: codeWizLogo
     }
   ];
 

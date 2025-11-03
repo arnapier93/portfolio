@@ -39,7 +39,7 @@
   color: #000000;
   text-align: justify;
   font-family: Consolas, monospace;
-  font-size: 28px;
+  font-size: clamp(0.75rem, 1.5vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
 }
