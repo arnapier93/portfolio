@@ -33,8 +33,12 @@ function ProjectCard({ project, index }) {
           <p className="text">{description}</p>
 
           <div className="buttons-box">
-            <button onClick={handleOpenProject}>LAUNCH DEMO {'>'}</button>
-            <button onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}</button>
+            <button className="green-btn"
+              onClick={handleOpenProject}>LAUNCH DEMO {'>'}
+              </button>
+            <button className="green-btn" 
+              onClick={handleOpenFeedback}>PROVIDE FEEDBACK {'>'}
+            </button>
           </div>
         </div>
 

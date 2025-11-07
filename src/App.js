@@ -13,7 +13,6 @@ function App() {
       <section id="AboutMe"><AboutMe/></section>
       <section id="Projects"><Projects/></section>
       <section id="Testimonials"><Testimonials/></section>
-      <section id="GetinTouch"><GetInTouch/></section>
     </div>
   );
 }

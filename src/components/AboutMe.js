@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./AboutMe.css";
 import useMouseSpeed from "../hooks/useMouseSpeed";
+import Modal from "./Modal";
+import { ProjectList } from "./ProjectList.js"
+
 
 import allc from "../assets/allc.png";
 import androidstudio from "../assets/androidstudio.png";
@@ -18,6 +21,7 @@ import unity from "../assets/unity.png";
 import vscode from "../assets/vscode.png";
 import xcode from "../assets/xcode.png";
 
+
 const text = `Firstly, thank you for visiting my site! 
 I am a full stack developer with a Bachelor's Degree in Computer Science 
 — Computer Game Design from the University of Massachusetts Dartmouth.
@@ -27,6 +31,20 @@ const logo_row1 = [androidstudio, allc, dart, figma, flutter, godot, java, js];
 const logo_row2 = [linux, postman, python, swift, unity, vscode, xcode];
 
 const AboutMe = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [lastIndex, setLastIndex] = useState(null);
+  const handleOpenProject = () => {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * ProjectList.length);
+    } while (newIndex === lastIndex && ProjectList.length > 1);
+
+    const randomProject = ProjectList[newIndex];
+    setLastIndex(newIndex);
+    setSelectedProject(randomProject);
+  };
+  const handleCloseProject = () => setSelectedProject(null); 
+
   const mouse = useMouseSpeed();
   const [logoRotations, setLogoRotations] = useState({});
   const [logoWobbles, setLogoWobbles] = useState({});
@@ -95,27 +113,24 @@ const AboutMe = () => {
 
   return (
     <div className="about-me">
-      <div style={{ display: "flex" }}>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}> 
-          <div className="content">
-            <h1 className="title">Hi! I'm Andrew Napier</h1>
-            <p className="text">{text}</p>
-            <button style={{ width: "700px", height: "85px" }}>
-              GO AHEAD, YOU KNOW YOU WANT TO! {'>'}
-            </button>
-          </div>
-          <p className="text" style={{alignSelf: "flex-end"}}>Proficient in:</p>
+      
+      <div style={{ display: "flex", gap:"2vw", alignItems:"flex-start"}}>
+        <div className="content">
+          <h1 className="title">Hi! I'm Andrew Napier</h1>
+          <p className="text">{text}</p>
+          <button className="green-btn"
+            onClick={handleOpenProject}>
+            GO AHEAD, YOU KNOW YOU WANT TO! {'>'}
+          </button>
+          <p className="text">Proficient in:</p>
         </div>
-        <div className="photo-frame">
-          <div className="photo"></div>
-        </div>
+        <div className="photo"></div>
       </div>
 
       <div className="logo-row">
         {logo_row1.map((logo, index) => (
           <div
             key={index}
-            className={index === 6 ? "logo-wrapper" : ""}
             onMouseMove={(e) => handleMouseMove(index, e)}
             style={getLogoStyle(index)}
           >
@@ -135,6 +150,24 @@ const AboutMe = () => {
           </div>
         ))}
       </div>
+
+      {selectedProject && (
+        <Modal onClose={handleCloseProject}>
+          {selectedProject.type === "iframe" && (
+            <iframe src={selectedProject.src} title={selectedProject.title} style={{ width: "100%", height: "100%", border: "none" }} />
+          )}
+          {selectedProject.type === "video" && (
+            <video src={selectedProject.src} controls style={{ width: "100%", height: "100%" }} />
+          )}
+          {selectedProject.type === "images" && (
+            <div className="image-gallery">
+              {selectedProject.src.map((img, i) => (
+                <img key={i} src={selectedProject.img} alt={`Slide ${i}`} />
+              ))}
+            </div>
+          )}
+        </Modal>
+      )}
     </div>
   );
 };

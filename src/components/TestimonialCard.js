@@ -1,73 +1,74 @@
-import React from "react";
 import "./TestimonialCard.css";
+import firasHeadshot from "../assets/firas_khatib.png";
+import addyHeadshot from "../assets/addy.webp";
+import codeWizLogo from "../assets/code-wiz-logo.png";
 
-import firasHeadshot from "../assets/firas_khatib.webp";
-import addyHeadshot from "../assets/addy.webp"
-import codeWizLogo from "../assets/code-wiz-logo.png"
-
-const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
-  Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, 
-  sunt in culpa qui officia deserunt mollit anim id est laborum.`
+const testimonials = [
+  {
+    blurb: `I was lucky enough to have Andrew in 3 of my classes last year.
+      He wrote a thoroughly researched term paper on Targeted Digital Advertising
+      for my Social & Ethical Aspects of Computing course and created a very
+      original Unity game for my Computer Game Design course. Our year long 
+      Senior Design course, however, is where I really got to see Andrew flourish.
+      Every other team had 3-4 students while Andrew was in an interdisciplinary 
+      project so he was the only one from his team in my course. He collaborated 
+      with two graduate students on any software, though, he was the only one producing 
+      all the required documentation for the customer in the design process.
+    `,
+    name: "Firas Khatib, PhD",
+    details: [
+      "Associate Professor",
+      "Dept of Computer and Information Science",
+      "UMass Dartmouth",
+    ],
+    photo: firasHeadshot,
+  },
+  {
+    blurb: `Working with Andrew on the Dowd Solar Pump Project was a good experience.
+      He was organized and communicated well with our engineering team and the client.
+      When issues did arise, Andrew would always help the team find a solution. I 
+      appreciated his clear updates and problem-solving. I would be glad to work with him again.
+    `,
+    name: "Aditya Sahu",
+    details: ["Software Development Engineer", "Amazon Web Services"],
+    photo: addyHeadshot,
+  },
+  {
+    blurb: `When Andrew first joined CodeWiz, he was new to working with kids, but he quickly 
+      became one of our most engaging and approachable coaches. He started with our LEGO Robotics 
+      classes and now teaches nearly every subject we offer — from Python and Scratch to AI and 
+      game development with Roblox or MCreator. His classes are filled with fun, and he has a strong 
+      ability to explain complex concepts in a kid-friedly way. As our First LEGO League (FLL) coach, he’s
+      introduced students to professional tools like Python and GitHub, helping them think like real 
+      developers and build innovative projects.
+    `,
+    name: "Serena",
+    details: ["Center Director", "CodeWiz Needham"],
+    photo: codeWizLogo,
+  },
+];
 
 const TestimonialCard = ({ index }) => {
-
-  const contents = [
-    {
-      blurb: `I was lucky enough to have Andrew in 3 of my classes last year. He wrote a 
-      thoroughly researched term paper on Targeted Advertising & Digital Marketing for my
-      Social and Ethical Aspects of Computing course and created a very original Unity game
-      for my Computer Game Design course. Our year-long capstone senior design course is
-      where I really got to see Andrew flourish though, as every other team had 3-4 students
-      in the class to work on their project. Andrew tackled his capstone project on his own,
-      with only a couple graduate students collaborating with him outside of class. In my
-      course, however, Andrew was the only one producing all the required documentation for
-      the client and he thrived with this individual responsibility. I wish I had more
-      dedicated students like him!`,
-      name: "Firas Khatib, PhD",
-      details: ["Associate Professor", "Department of Computer and Information Science", "University of Massachustts Dartmouth"],
-      photo: firasHeadshot
-    },
-    {
-      blurb: `I had the pleasure to work with Andrew on the Dowd Solar Pump Project. He managed the team with good 
-        communication and kept everyone on track. He was always respectful and helpful when working between the 
-        engineering team and with the customer. When issues did come up Andrew stayed calm and focued on finding a 
-        solution for the team. I would be glad to collaborate with him again.`,
-      name: "Aditya Sahu",
-      details: ["Software Development Engineer", "Amazon Web Services"],
-      photo: addyHeadshot
-    },
-    {
-      blurb: loremIpsum,
-      name: "Serena ",
-      details: ["Center Director", "CodeWiz"],
-      photo: codeWizLogo
-    }
-  ];
+  const { name, details, blurb, photo } = testimonials[index];
 
   return (
     <div className="testimonial-card">
-      <p className="text blurb" style={{display: "flex", flexGrow: "1", alignItems: "center"}}>
-          {contents[index].blurb}</p>
-      <div style={{ display: "flex", border: "2px dashed blue" }}>
-        <img className="photo" src={contents[index].photo} alt="testifier" />
+      <div className="colleague">
+        <img className="photo" src={photo} alt={name} />
         <div className="name-and-details">
-          <h1 className="title" style={{ fontSize: "24px", color: "#000000" }}>
-            {contents[index].name}
-          </h1>
-          <p className="text">
-            {contents[index].details[0]}
-          </p>
-          <p className="text"s>
-            {contents[index].details[1]}
-          </p>
-          <p className="text">
-            {contents[index].details[2]}
-          </p>
+          <h1 className="title">{name}</h1>
+          {details.map((d, i) => (
+            <p className="text" key={i}>
+              {d}
+            </p>
+          ))}
         </div>
       </div>
+
+      <p className="text blurb">{blurb}</p>
     </div>
   );
 };
 
 export default TestimonialCard;
+export const testimonialCount = testimonials.length; // 👈 export count for the carousel

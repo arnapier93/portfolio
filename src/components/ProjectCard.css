@@ -26,33 +26,31 @@
 }
 
 .project-title-and-tags {
-  position: relative;
   display: flex;
-  align-items:baseline;
-  justify-content: flex-start;
-  width: auto;
-  height: 100%;                    /* give it vertical space to position title at bottom */
-  gap: 0.5vh;
+  flex-direction: row;
+  align-items: flex-end; /* aligns title and tags along the bottom */
+  justify-content: space-between;
+  width: 100%;
+  gap: 1vw;
 }
 
 .project-title-and-tags .title {
-  position: absolute;
-  bottom: 0;                       /* stick to bottom */
-  left: 0;
+  position: static;
   color: black;
   font-size: clamp(1.2rem, 1vw + 0.8rem, 2rem);
   font-weight: 600;
-  width: 24vw;
+  width: auto;
 }
 
 .tags-box {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;     /* visually wrap upward */
-  align-content: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
   gap: 0.4vw;
-  width: 100%;
+  flex-grow: 1;
 }
+
 
 .tag {
   padding: 0.2em 1em;
@@ -67,12 +65,6 @@
 .buttons-box {
   display: flex;
   gap: 2vw;
-}
-
-.buttons-box button {
-  width: clamp(160px, 15vw, 240px);
-  height: clamp(40px, 5vh, 60px); 
-  font-size: clamp(0.9rem, 0.8vw + 0.5rem, 1.2rem);
 }
 
 .screenshots {
