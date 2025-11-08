@@ -1,0 +1,11 @@
+# robots.txt for Andrew Napier's Portfolio
+# Allow all search engines to index the main site
+User-agent: *
+Allow: /
+
+# Prevent crawling of large project build folders (optional)
+Disallow: /projects/
+Disallow: /static/
+
+# Sitemap location
+Sitemap: https://andrew-napier.com/sitemap.xml
