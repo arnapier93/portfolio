@@ -18,7 +18,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "npm run build && serve -s build -l 5000 & start http://localhost:5000",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "serve": "^14.2.5"
   }
 }
