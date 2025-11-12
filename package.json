@@ -12,16 +12,15 @@
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
+    },
   "scripts": {
-    "clean": "powershell -Command Remove-Item -Recurse -Force build -Verbose -ErrorAction SilentlyContinue; Remove-Item -Force *.css, *.js, *.map, *.ico -Verbose -ErrorAction SilentlyContinue; Write-Host 'Cleanup done!'\"",
-    "predeploy": "npm run clean && npm run build",
-    "deploy": "gh-pages -d build --clean",
-    "test": "npm run predeploy && serve -s build -l 5000 & start http://localhost:5000",
-    "start": "react-scripts start",
+    "clean": "rimraf build",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "gh-pages -d build -b gh-pages -r https://github.com/arnapier93/portfolio.git",
+    "serve-build": "serve -s build -l 5000"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
