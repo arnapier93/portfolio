@@ -1,0 +1,45 @@
+.testimonial-card{
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  height: 50vh;
+  background: #FFFFFF;
+  border-radius: 1vw;
+  padding: 25px;
+  box-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+  align-items: center;
+  gap: 2vw;
+  padding: 4vw;
+}
+
+.colleague{
+  display: flex;
+  flex-direction: column;
+  width: 30%
+}
+
+.testimonial-card .photo{
+  height: 10vw;
+  width: 10vw;
+  margin: 1vw;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.name-and-details{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.name-and-details .title{
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+  color: #000000;
+}
+
+.name-and-details .text{
+  font-size: 11px;
+  line-height: 1.1;
+  text-align: left;
+  margin-top: 0.1vh;
+}

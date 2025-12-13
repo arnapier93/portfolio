@@ -1,0 +1,84 @@
+.navbar {
+    width: 88vw;
+    height: 10vh;
+    margin-top: 2vh;
+    padding: 1vw;
+    background-color: rgba(45, 47, 57, 0.60);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 1.5s ease-in-out;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transform: translateY(-14vh);
+    transition: transform 0.2s ease-in-out;
+    transition: background-color 1.5s ease-in-out;    
+    background-color: rgba(45, 47, 57, 0.85);
+}
+
+.navbar-fixed:hover {
+    transform: translateY(-5vh);
+    transition: transform 0.2s ease-in-out;
+    transition-delay: 0.05s;
+}
+
+.jumplinks {
+    height: 8vh;
+    width: 65%;
+    padding: 1vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-text {
+    text-align: center;
+    color: rgba(56, 216, 126, 0.65);
+    font-size: clamp(1.2rem, 1vw + 0.8rem, 2rem);
+    font-family: "Consolas", monospace;
+    font-weight: 700;
+    cursor: pointer; 
+    text-decoration: none; 
+    transition: color 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.navbar-text:hover {
+    color: rgba(56, 216, 126, 1);
+}
+
+.contact-icons {
+    display: flex;
+    height: 8vh;
+    width: 25%;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.icon {
+    width: clamp(6vw, 8vh, 8vw);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon svg{
+    height: 100%;
+    width: 100%;
+}
+
+
+.icon:hover {
+    transform: scale(1.1);
+    fill: rgba(56, 216, 126, 1);
+}

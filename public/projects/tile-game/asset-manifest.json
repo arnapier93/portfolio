@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projects/tile-game/static/css/main.3ac397a4.css",
+    "main.js": "/projects/tile-game/static/js/main.54e3d912.js",
+    "index.html": "/projects/tile-game/index.html",
+    "main.3ac397a4.css.map": "/projects/tile-game/static/css/main.3ac397a4.css.map",
+    "main.54e3d912.js.map": "/projects/tile-game/static/js/main.54e3d912.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ac397a4.css",
+    "static/js/main.54e3d912.js"
+  ]
+}

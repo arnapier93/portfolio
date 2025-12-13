@@ -1,0 +1,12 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+

@@ -1,0 +1,68 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh; 
+    width: clamp(62vw, 84vw, 86vw);
+}
+
+.green-btn{
+    width: fit-content;
+    align-self: center;
+    padding: 1vw;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    height: 57vh;
+}
+
+.content > * {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about-me .text{
+    color: #DEDEDE;
+    line-height: 1.5;
+}
+
+.about-me .title{
+   font-size: clamp(1.2rem, 1vw + 1rem, 5rem);
+}
+
+.about-me .photo {
+    width: clamp(28vw, 32vw, 33vw);
+    display: flex;
+    aspect-ratio: 1 / 1;
+    background-image: url("../assets/real-me.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5.419px 5.419px 0px rgba(0, 0, 0, 0.25) inset;
+    transition: background-image 1.5s ease-in-out;
+}
+
+.photo:hover {
+    transition-delay: 3s;
+    background-image: url("../assets/claymation_me.png");
+}
+
+.logo-row{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5vw, 1vw + 0.7rem, 3vw);
+}
+
+.logo{
+    width: clamp(4vw, 5vw, 8vw);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    padding: 0.5vh;
+    filter: drop-shadow(6px 6px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.1s linear;
+}

@@ -1,0 +1,104 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.app {
+  background: linear-gradient(90deg, #2D2F39 0%, #595C69 50.4%, #C3C5E6 100%);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.title{
+  color: #FFFFFF;
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  cursor: default;
+  font-style: normal;
+  font-size: 64px;
+  height: fit-content;
+  margin: 0px;
+  /*border: 2px dashed red;*/
+}
+
+.title-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  /*border: 2px dashed red;*/
+}
+
+.title-box .text{
+  color: #DEDEDE;
+  width: 800px;
+  text-align: center;
+  /*border: 2px dashed red;*/
+}
+
+.text{
+  color: #000000;
+  text-align: justify;
+  font-family: Consolas, monospace;
+  font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+  cursor: default;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.photo{
+  border-radius: 50%;
+}
+
+button.green-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vw;
+  aspect-ratio: 4 / 1; 
+  font-size: clamp(0.9rem, 0.8vw + 0.5rem, 1.2rem);
+  background: rgba(56, 216, 126, 0.80);
+  color: #FFF;
+  text-align: center;
+  font-family: Consolas, monospace;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  box-shadow: 0px 5.5px 5.5px 0px rgba(0, 0, 0, 0.25);
+  transition: font-size 0.2s ease-in-out, trasnform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button.green-btn:hover {
+  background: rgba(56, 216, 126, 1);
+  transform: scale(1.025);
+}
+
+
+/*use this to make all the logos spin*/
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
