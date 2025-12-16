@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d9cf7ff.css",
+    "main.js": "/static/js/main.e78a3166.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/real-me.png": "/static/media/real-me.4bba99fb89bcfc7785e3.png",
+    "static/media/claymation_me.png": "/static/media/claymation_me.01069d9a2ae95e8c91fd.png",
+    "static/media/firas_khatib.png": "/static/media/firas_khatib.324d193cc9a3caa47056.png",
+    "static/media/toast-tester-screenshot.png": "/static/media/toast-tester-screenshot.ec1038d41bd269da52b6.png",
+    "static/media/the-longest-box-screenshot.png": "/static/media/the-longest-box-screenshot.6f2310b3536596cca674.png",
+    "static/media/DSP_Logo.png": "/static/media/DSP_Logo.5ee381ebc0457895fe1d.png",
+    "static/media/tile-game-screenshot.png": "/static/media/tile-game-screenshot.c2636c3d110983a3f2b9.png",
+    "static/media/addy.webp": "/static/media/addy.64fe2e543b63c11d3f4e.webp",
+    "static/media/unity.png": "/static/media/unity.1ef1ab9bee8cf283e285.png",
+    "static/media/dart.png": "/static/media/dart.e7f859c2f797bed8f7e6.png",
+    "static/media/allc.png": "/static/media/allc.b30a29b5a083778e098d.png",
+    "static/media/postman.png": "/static/media/postman.4547fcb5e1bb5ecf094c.png",
+    "static/media/linux.png": "/static/media/linux.ffc7d58aff19edb76338.png",
+    "static/media/js.png": "/static/media/js.38323140666580081f57.png",
+    "static/media/godot.png": "/static/media/godot.2c24ef7beeeb67705317.png",
+    "static/media/java.png": "/static/media/java.7123576f3f08ba5aff0d.png",
+    "static/media/python.png": "/static/media/python.90b8ab45c1ccc13ddc36.png",
+    "static/media/xcode.png": "/static/media/xcode.f5e9c15252ed05f0b236.png",
+    "static/media/code-wiz-logo.png": "/static/media/code-wiz-logo.b2a19b8362cf4580b8b4.png",
+    "index.html": "/index.html",
+    "static/media/email.svg": "/static/media/email.6a335055e4fe6f7a3844dc0648ec4023.svg",
+    "static/media/github.svg": "/static/media/github.5d9c917490bc2b30ca0199cbb6dfd11c.svg",
+    "static/media/upwork.svg": "/static/media/upwork.a8a7d6f90c8dcf52ce671da8fefad819.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.5cf43d3f3dd9637d8dfbd12ef1c92f61.svg",
+    "main.6d9cf7ff.css.map": "/static/css/main.6d9cf7ff.css.map",
+    "main.e78a3166.js.map": "/static/js/main.e78a3166.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d9cf7ff.css",
+    "static/js/main.e78a3166.js"
+  ]
+}
