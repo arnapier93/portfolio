@@ -26,6 +26,8 @@ git push -f
 cd ..
 
 rm -rf build
+git worktree remove .gh-pages-temp
 rm -rf .gh-pages-temp
+
 
 echo "=== DONE ==="
