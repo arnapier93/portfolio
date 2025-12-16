@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.10.1",
     "react-scripts": "5.0.1",
     "rimraf": "^6.1.0",
     "web-vitals": "^2.1.4"
@@ -20,7 +21,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run clean && npm run build",
     "deploy": "bash ./deploy.sh",
-    "serve-build": "serve -s build -l 5000"
+    "serve-build": "serve -s build -l 6000"
   },
   "eslintConfig": {
     "extends": [

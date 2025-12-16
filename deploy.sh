@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DOMAIN="yourdomain.com"  # <-- change to your custom domain
+DOMAIN="andrew-napier.com"
 
 echo "=== CLEANING BUILD FOLDER ==="
 rm -rf build
@@ -14,6 +14,8 @@ echo "=== ENSURING CNAME EXISTS ==="
 echo "$DOMAIN" > build/CNAME
 
 echo "=== PUSHING TO gh-pages ==="
+
+
 
 # Create a temporary clean clone of gh-pages INSIDE memory
 git worktree prune
@@ -35,6 +37,7 @@ cd ..
 
 echo "=== CLEANING BUILD FOLDER AGAIN ==="
 rm -rf build
+rm -rf .gh-pages-temp
 
 echo "=== DONE ==="
 h
