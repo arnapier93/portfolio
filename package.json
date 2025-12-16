@@ -15,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "react-scripts start",
     "clean": "rimraf build",
     "build": "react-scripts build",
     "predeploy": "npm run clean && npm run build",
