@@ -22,7 +22,7 @@ cp -r build/* .gh-pages-temp/
 cd .gh-pages-temp
 git add -A
 git commit -m "Deploy $(date)" || echo "No changes to commit."
-git push
+git push -f
 cd ..
 
 rm -rf build
