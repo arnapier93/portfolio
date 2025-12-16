@@ -22,8 +22,9 @@ git worktree prune
 rm -rf .gh-pages-temp
 git worktree add .gh-pages-temp gh-pages
 
-# Delete everything in gh-pages (except .git)
-find .gh-pages-temp -mindepth 1 -not -name ".git" -exec rm -rf {} +
+# Delete everything in gh-pages except .git, CNAME, and .gitignore
+find .gh-pages-temp -mindepth 1 -not -name ".git" -not -name "CNAME" -not -name ".gitignore" -exec rm -rf {} +
+
 
 # Copy build into the gh-pages directory
 cp -r build/* .gh-pages-temp/
@@ -40,4 +41,3 @@ rm -rf build
 rm -rf .gh-pages-temp
 
 echo "=== DONE ==="
-h
