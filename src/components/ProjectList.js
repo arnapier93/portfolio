@@ -31,7 +31,7 @@ export const ProjectList = [
     tags: ["JavaScript", "Three.js"],
     screenshot: toastTesterScreenshot, 
     type: "iframe", 
-    src: process.env.PUBLIC_URL + "/projects/Toast-Tester/index.html" 
+    src: process.env.PUBLIC_URL + "/projects/toast-tester/index.html" 
   },
   {
     title: "The Longest Box",

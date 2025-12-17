@@ -20,8 +20,8 @@ import unity from "../assets/unity.png";
 import vscode from "../assets/vscode.png";
 import xcode from "../assets/xcode.png";
 
-const text = `Firstly, thank you for visiting my site! 
-I am a full stack developer with a Bachelor's Degree in Computer Science 
+const text = `Thank you for visiting my site! 
+I'm Andrew Napier, a full stack developer with a Bachelor's Degree in Computer Science 
 — Computer Game Design from the University of Massachusetts Dartmouth.
 Press the button below to launch a random project of mine.`;
 
